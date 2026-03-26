@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://lx24651u21ia"]
+
+[ext_resource type="Texture2D" uid="uid://c8fuwysrhqqsk" path="res://sprites/SBD Dauntless.png" id="1_c8o31"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rj7p"]
+atlas = ExtResource("1_c8o31")
+region = Rect2(0, 0, 45, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1112"]
+atlas = ExtResource("1_c8o31")
+region = Rect2(45, 0, 45, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hpq6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rj7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1112")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_8mnci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_kjvqc"]
+resource_name = "angle down"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1.1920599, -0.16666667, 0.19867665, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0kbb5"]
+_data = {
+&"RESET": SubResource("Animation_8mnci"),
+&"angle down": SubResource("Animation_kjvqc")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=888283688]
+sprite_frames = SubResource("SpriteFrames_hpq6w")
+autoplay = "default"
+frame_progress = 0.061421864
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1741636848]
+libraries/ = SubResource("AnimationLibrary_0kbb5")
