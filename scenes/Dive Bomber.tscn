@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://lx24651u21ia"]
 
 [ext_resource type="Texture2D" uid="uid://c8fuwysrhqqsk" path="res://sprites/SBD Dauntless.png" id="1_c8o31"]
+[ext_resource type="Texture2D" uid="uid://bm75mhqqyrm5k" path="res://sprites/SBD Bomb.png" id="2_5ywuo"]
+[ext_resource type="Script" uid="uid://c1gfqj7sve5s5" path="res://scenes/dive_bomber.gd" id="2_x24ws"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7rj7p"]
 atlas = ExtResource("1_c8o31")
@@ -29,40 +31,76 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
+tracks/0/path = NodePath("Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [-0.32463124]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4, 9)]
 }
 
-[sub_resource type="Animation" id="Animation_kjvqc"]
-resource_name = "angle down"
-tracks/0/type = "bezier"
+[sub_resource type="Animation" id="Animation_5yp5o"]
+resource_name = "drop bomb"
+length = 3.0333333
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
+tracks/0/path = NodePath("Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1.1920599, -0.16666667, 0.19867665, 0, 0),
-"times": PackedFloat32Array(0, 1)
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.32463124]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4, 9)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0kbb5"]
 _data = {
 &"RESET": SubResource("Animation_8mnci"),
-&"angle down": SubResource("Animation_kjvqc")
+&"drop bomb": SubResource("Animation_5yp5o")
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=888283688]
+rotation = -1.2409291
 sprite_frames = SubResource("SpriteFrames_hpq6w")
 autoplay = "default"
 frame_progress = 0.061421864
+script = ExtResource("2_x24ws")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=729885875]
+position = Vector2(-4, 9)
+rotation = -0.32463124
+texture = ExtResource("2_5ywuo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1741636848]
 libraries/ = SubResource("AnimationLibrary_0kbb5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=190243423]
+zoom = Vector2(5, 5)
