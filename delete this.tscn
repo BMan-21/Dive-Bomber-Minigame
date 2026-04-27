@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://buau8c2yla0sd"]
+
+[ext_resource type="Texture2D" uid="uid://c8fuwysrhqqsk" path="res://sprites/SBD Dauntless.png" id="1_c8o31"]
+[ext_resource type="Texture2D" uid="uid://bm75mhqqyrm5k" path="res://sprites/SBD Bomb.png" id="2_5ywuo"]
+[ext_resource type="Script" uid="uid://c1gfqj7sve5s5" path="res://delete this.gd" id="2_x24ws"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rj7p"]
+atlas = ExtResource("1_c8o31")
+region = Rect2(0, 0, 45, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1112"]
+atlas = ExtResource("1_c8o31")
+region = Rect2(45, 0, 45, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hpq6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rj7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1112")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=888283688]
+rotation = -1.2409291
+sprite_frames = SubResource("SpriteFrames_hpq6w")
+autoplay = "default"
+frame_progress = 0.061421864
+script = ExtResource("2_x24ws")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=729885875]
+position = Vector2(-4, 9)
+texture = ExtResource("2_5ywuo")

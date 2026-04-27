@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Dive Bomber Minigame"
+config/name="Dive Bomber Minigame Main"
 run/main_scene="uid://b4hn1lxsphn0w"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 
 [input]
