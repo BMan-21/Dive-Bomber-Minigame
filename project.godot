@@ -15,6 +15,10 @@ run/main_scene="uid://b4hn1lxsphn0w"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_height=1152
+
 [input]
 
 "bomb drop"={
