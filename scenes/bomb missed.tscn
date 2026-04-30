@@ -206,6 +206,6 @@ frame_progress = 1.0
 script = ExtResource("2_25iad")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1094080793]
-zoom = Vector2(4.7, 4.7)
+zoom = Vector2(5.47, 5.47)
 
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
