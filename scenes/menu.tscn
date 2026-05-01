@@ -28,6 +28,16 @@ theme_override_fonts/font = ExtResource("1_vjb58")
 text = "How to 
 play"
 
+[node name="Label" type="Label" parent="." unique_id=79332306]
+offset_left = -126.0
+offset_top = -70.0
+offset_right = 140.0
+offset_bottom = -21.0
+theme_override_fonts/font = ExtResource("1_vjb58")
+text = "Controll a Douglass 
+SBD Dauntless"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

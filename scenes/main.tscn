@@ -16,6 +16,7 @@ sources/0 = SubResource("TileSetAtlasSource_o6xl0")
 [node name="Node2D" type="Node2D" unique_id=1965414850]
 
 [node name="CharacterBody2D" parent="." unique_id=864622640 instance=ExtResource("1_o5qli")]
+unique_name_in_owner = true
 position = Vector2(0, -4000)
 scale = Vector2(3, 3)
 speed = 30000
@@ -164,3 +165,13 @@ texture = ExtResource("5_tbgi4")
 [node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=421987092]
 position = Vector2(-4675.001, 1299.9868)
 texture = ExtResource("5_tbgi4")
+
+[node name="Button" type="Button" parent="." unique_id=965269718]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -8553.0
+offset_top = -7656.0
+offset_right = 11055.0
+offset_bottom = 6342.0
+
+[connection signal="pressed" from="Button" to="CharacterBody2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
