@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bt6v3lhl00rqv" path="res://sprites/alt arrow.png" id="2_jyhfs"]
 [ext_resource type="FontFile" uid="uid://1x4cu4ckfy6b" path="res://sprites/MegamaxJonathanToo-YqOq2.ttf" id="3_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://bun8od6jy3kgd" path="res://sprites/alt bar.png" id="4_tefeu"]
+[ext_resource type="Texture2D" uid="uid://f5s8a53uyaxw" path="res://sprites/—Pngtree—pixel art white cloud graphic_21136654.png" id="5_tbgi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6xl0"]
 texture = ExtResource("4_tefeu")
@@ -17,16 +18,19 @@ sources/0 = SubResource("TileSetAtlasSource_o6xl0")
 [node name="CharacterBody2D" parent="." unique_id=864622640 instance=ExtResource("1_o5qli")]
 position = Vector2(0, -4000)
 scale = Vector2(3, 3)
+speed = 30000
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1065424667]
 zoom = Vector2(1.21, 1.21)
 
 [node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D" unique_id=1747696211]
+z_index = 1
 position = Vector2(-72.83333, -8)
 scale = Vector2(2.2708333, 1.5)
 texture = ExtResource("2_jyhfs")
 
 [node name="altitude arrow" type="Label" parent="CharacterBody2D" unique_id=1798088223]
+z_index = 1
 offset_left = -83.0
 offset_top = -10.999999
 offset_right = 4.0
@@ -40,3 +44,123 @@ text = "error"
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD6/+f/AAAAAAAAAAD6/+j/AAAAAAAAAAD6/+n/AAAAAAAAAAD6/+r/AAAAAAAAAAD6/+v/AAAAAAAAAAD6/+z/AAAAAAAAAAD6/+3/AAAAAAAAAAD6/+7/AAAAAAAAAAD6/+//AAAAAAAAAAD6//D/AAAAAAAAAAD6//H/AAAAAAAAAAD6//L/AAAAAAAAAAD6//P/AAAAAAAAAAD6//T/AAAAAAAAAAD6//X/AAAAAAAAAAD6//b/AAAAAAAAAAD6//f/AAAAAAAAAAD6//j/AAAAAAAAAAD6//n/AAAAAAAAAAD6//r/AAAAAAAAAAD6//v/AAAAAAAAAAD6//z/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAAAAAD6/wQAAAAAAAAAAAD6/wUAAAAAAAAAAAD6/wYAAAAAAAAAAAD6/wcAAAAAAAAAAAD6/wgAAAAAAAAAAAD6/wkAAAAAAAAAAAD6/woAAAAAAAAAAAD6/wsAAAAAAAAAAAD6/+b/AAAAAAAAAAD6/+X/AAAAAAAAAAD6/+T/AAAAAAAAAAD6/+P/AAAAAAAAAAD6/+L/AAAAAAAAAAD6/+H/AAAAAAAAAAD6/+D/AAAAAAAAAAD6/9//AAAAAAAAAAD6/97/AAAAAAAAAAD6/93/AAAAAAAAAAD6/9z/AAAAAAAAAAD6/9v/AAAAAAAAAAD6/9r/AAAAAAAAAAD6/9n/AAAAAAAAAAD6/9j/AAAAAAAAAAD6/9f/AAAAAAAAAAD6/9b/AAAAAAAAAAD6/9X/AAAAAAAAAAD6/9T/AAAAAAAAAAD6/9P/AAAAAAAAAAD6/9L/AAAAAAAAAAD6/9H/AAAAAAAAAAD6/9D/AAAAAAAAAAD6/8//AAAAAAAAAAD6/87/AAAAAAAAAAD6/83/AAAAAAAAAAD6/8z/AAAAAAAAAAD6/8v/AAAAAAAAAAD6/8r/AAAAAAAAAAD6/8n/AAAAAAAAAAD6/8j/AAAAAAAAAAD6/8f/AAAAAAAAAAD6/8b/AAAAAAAAAAD6/8X/AAAAAAAAAAD6/8T/AAAAAAAAAAD6/8P/AAAAAAAAAAD6/8L/AAAAAAAAAAD6/8H/AAAAAAAAAAD6/8D/AAAAAAAAAAD6/7//AAAAAAAAAAD6/77/AAAAAAAAAAD6/73/AAAAAAAAAAD6/7z/AAAAAAAAAAD6/7v/AAAAAAAAAAD6/7r/AAAAAAAAAAD6/7n/AAAAAAAAAAD6/7j/AAAAAAAAAAD6/7f/AAAAAAAAAAD6/7b/AAAAAAAAAAD6/7X/AAAAAAAAAAD6/7T/AAAAAAAAAAD6/7P/AAAAAAAAAAD6/7L/AAAAAAAAAAD6/7H/AAAAAAAAAAD6/7D/AAAAAAAAAAD6/6//AAAAAAAAAAD6/67/AAAAAAAAAAD6/63/AAAAAAAAAAD6/6z/AAAAAAAAAAD6/6v/AAAAAAAAAAD6/6r/AAAAAAAAAAD6/6n/AAAAAAAAAAD6/6j/AAAAAAAAAAD6/6f/AAAAAAAAAAD6/6b/AAAAAAAAAAD6/6X/AAAAAAAAAAD6/6T/AAAAAAAAAAD6/6P/AAAAAAAAAAD6/6L/AAAAAAAAAAD6/6H/AAAAAAAAAAD6/6D/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_tipki")
+
+[node name="clouds" type="Node2D" parent="." unique_id=153121797]
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds" unique_id=1850458619]
+position = Vector2(4.999998, -992)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="clouds/Sprite2D" unique_id=124585594]
+position = Vector2(-1034.9999, -11329.998)
+scale = Vector2(0.19999999, 0.19999999)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2" unique_id=550697092]
+position = Vector2(14475, -15499.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D" unique_id=303814935]
+position = Vector2(-14700.004, 1125.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D" unique_id=1517078010]
+position = Vector2(5450.004, 6350.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D" unique_id=1081570762]
+position = Vector2(-1225.0015, 4575.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1550581340]
+position = Vector2(4875.0005, -20174.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=445800008]
+position = Vector2(-1200.001, 25225.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=970264290]
+position = Vector2(-5999.9995, 13300.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=2023480105]
+position = Vector2(7350.0005, 5075.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1465365827]
+position = Vector2(-2125.0005, -10374.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=648316181]
+position = Vector2(-5399.9995, 14150.002)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1220913285]
+position = Vector2(1725.0005, -18174.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1775645169]
+position = Vector2(4875.0005, -20174.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1929742366]
+position = Vector2(-1300.0004, 40599.992)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1888937743]
+position = Vector2(4875.0005, -20174.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1039653082]
+position = Vector2(-7325.0015, 12075.008)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1476913400]
+position = Vector2(4400.0015, -4924.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=284151084]
+position = Vector2(1674.999, -17699.998)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=521032433]
+position = Vector2(-9225, 34250)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1840454662]
+position = Vector2(6700.001, -299.99805)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=2075309243]
+position = Vector2(1150.002, 6749.996)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2" unique_id=1379209283]
+position = Vector2(6700.001, -299.99805)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D" unique_id=584429510]
+position = Vector2(-5900.003, 5549.999)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D/Sprite2D" unique_id=1542836589]
+position = Vector2(2600.002, -7550.001)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D" unique_id=929689883]
+position = Vector2(1899.9989, 7199.999)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1510481267]
+position = Vector2(-4150, 3724.999)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=793696656]
+position = Vector2(5100.001, 4549.999)
+texture = ExtResource("5_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D2/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=421987092]
+position = Vector2(-4675.001, 1299.9868)
+texture = ExtResource("5_tbgi4")

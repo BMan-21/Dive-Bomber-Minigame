@@ -18,4 +18,16 @@ script = ExtResource("2_con2f")
 position = Vector2(35, 19)
 zoom = Vector2(3, 3)
 
+[node name="Button2" type="Button" parent="." unique_id=1130588864]
+offset_left = -24.0
+offset_top = 22.0
+offset_right = 70.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("1_vjb58")
+text = "How to 
+play"
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
