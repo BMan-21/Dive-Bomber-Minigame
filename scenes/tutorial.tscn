@@ -10,10 +10,10 @@ offset_right = 217.0
 offset_bottom = 234.0
 theme_override_fonts/normal_font = ExtResource("1_c13y7")
 theme_override_font_sizes/normal_font_size = 24
-text = "Dive bombing was a type of bombing where planes would bive from high altitudes at high angles. They would drop the bombs at 3000 ft to get accuracy and be able to withstand the high-forces required to withstand in order to pull up from the dive. Press Space or click/tap the screen to drop the bomb."
+text = "Dive bombing was a type of bombing where planes would dive from high altitudes at high angles. They would drop their  bombs at about 3,000 feet of altitude to get accuracy and be able to pull up at a gentle enough alngle to withstand the high-g forces . Press Space or click/tap the screen to drop the bomb."
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=121882072]
-position = Vector2(195, 188)
+position = Vector2(199, 197)
 zoom = Vector2(1.5, 1.5)
 
 [node name="Button" type="Button" parent="." unique_id=939549373]
