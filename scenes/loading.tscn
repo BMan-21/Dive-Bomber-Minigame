@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://3kh3a7l2snkk"]
+
+[ext_resource type="Script" uid="uid://b44i73syuj1qb" path="res://scenes/loading.gd" id="1_dhqfv"]
+[ext_resource type="Texture2D" uid="uid://c8fuwysrhqqsk" path="res://sprites/SBD Dauntless.png" id="1_yc7uc"]
+[ext_resource type="FontFile" uid="uid://1x4cu4ckfy6b" path="res://sprites/MegamaxJonathanToo-YqOq2.ttf" id="2_dhqfv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_101rs"]
+atlas = ExtResource("1_yc7uc")
+region = Rect2(0, 0, 45, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt702"]
+atlas = ExtResource("1_yc7uc")
+region = Rect2(45, 0, 45, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ytni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_101rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt702")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1310561708]
+script = ExtResource("1_dhqfv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=481686774]
+position = Vector2(208.99998, 291)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_2ytni")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=831265014]
+
+[node name="Label" type="Label" parent="." unique_id=875301539]
+offset_left = -243.0
+offset_top = -32.0
+offset_right = -10.0
+offset_bottom = 1.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_dhqfv")
+theme_override_font_sizes/font_size = 32
+text = "Loading..."

@@ -25,5 +25,4 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	if global_position.y > -3500:
-		Input.action_press("bomb drop")
+	Input.action_press("bomb drop")
