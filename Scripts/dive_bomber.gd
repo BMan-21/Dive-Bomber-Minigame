@@ -11,18 +11,13 @@ func _physics_process(delta: float) -> void:
 		#play die anim
 	altitude_arrow.text = str(round(global_position.y * -100)/10)
 	if Input.is_action_pressed("bomb drop"):
-		print("drop")
-		
 		if global_position.y > -350 and global_position.y < -250:
 			get_tree().change_scene_to_file("res://scenes/bomb successful.tscn")
 		elif global_position.y < -350:
 			get_tree().change_scene_to_file("res://scenes/bomb missed.tscn")
+			##play miss anim
 		if global_position.y > -250:
 			get_tree().change_scene_to_file("res://scenes/bomb die.tscn")
-			#play miss anim
+			#play fall anim
 
 	move_and_slide()
-
-
-func _on_button_pressed() -> void:
-	Input.action_press("bomb drop")

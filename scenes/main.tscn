@@ -3,8 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://cbpxmtg6188xj" path="res://scenes/Dive Bomber.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://bt6v3lhl00rqv" path="res://sprites/alt arrow.png" id="2_jyhfs"]
 [ext_resource type="FontFile" uid="uid://1x4cu4ckfy6b" path="res://sprites/MegamaxJonathanToo-YqOq2.ttf" id="3_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://ckbkr14qdk0s5" path="res://987987987987.png" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bun8od6jy3kgd" path="res://sprites/alt bar.png" id="4_tefeu"]
-[ext_resource type="Texture2D" uid="uid://f5s8a53uyaxw" path="res://sprites/—Pngtree—pixel art white cloud graphic_21136654.png" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://d0p8uxqamhotd" path="res://6575.png" id="5_tipki"]
+[ext_resource type="Texture2D" uid="uid://s0105maxnr3s" path="res://98798797.png" id="6_85g3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6xl0"]
 texture = ExtResource("4_tefeu")
@@ -19,7 +21,6 @@ sources/0 = SubResource("TileSetAtlasSource_o6xl0")
 unique_name_in_owner = true
 position = Vector2(0, -4000)
 scale = Vector2(3, 3)
-speed = 30000
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1065424667]
 zoom = Vector2(1.21, 1.21)
@@ -41,57 +42,64 @@ theme_override_fonts/font = ExtResource("3_tbgi4")
 theme_override_font_sizes/font_size = 24
 text = "error"
 
-[node name="Button" type="Button" parent="." unique_id=965269718]
-self_modulate = Color(1, 1, 1, 0)
-offset_left = -7921.0
-offset_top = -8288.0
-offset_right = 11687.0
-offset_bottom = 5710.0
-
 [node name="clouds" type="Node2D" parent="." unique_id=153121797]
 
 [node name="Sprite2D" type="Sprite2D" parent="clouds" unique_id=1850458619]
-position = Vector2(4.999998, -992)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_tbgi4")
+position = Vector2(-255.99997, -750)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_o6xl0")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D" unique_id=1384774876]
-position = Vector2(-1274.9999, -1449.9999)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D2" type="Sprite2D" parent="clouds" unique_id=1159918231]
+position = Vector2(-142, -1042)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D" unique_id=1673159242]
-position = Vector2(2510, -3939.9995)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D3" type="Sprite2D" parent="clouds" unique_id=860295743]
+position = Vector2(59.999985, -789)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_85g3d")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D/Sprite2D" unique_id=2086755544]
-position = Vector2(-1970, -1419.9999)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D4" type="Sprite2D" parent="clouds" unique_id=1048506370]
+position = Vector2(-57.999992, -629)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1951880807]
-position = Vector2(-435.0003, 3280)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D5" type="Sprite2D" parent="clouds" unique_id=890505791]
+position = Vector2(74.99999, -1162)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=690343408]
-position = Vector2(2994.9995, -4569.9995)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D6" type="Sprite2D" parent="clouds" unique_id=167958028]
+position = Vector2(-65.99998, -852)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_85g3d")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1763574401]
-position = Vector2(-704.9995, 6125)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D7" type="Sprite2D" parent="clouds" unique_id=963160350]
+position = Vector2(-111, -1240)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=681945957]
-position = Vector2(-1154.9998, -2625)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D8" type="Sprite2D" parent="clouds" unique_id=1779344147]
+position = Vector2(61.999985, -1438)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=501949460]
-position = Vector2(-365.0001, -8314.999)
-scale = Vector2(0.8433333, 0.82)
-texture = ExtResource("5_tbgi4")
+[node name="Sprite2D9" type="Sprite2D" parent="clouds" unique_id=93869584]
+position = Vector2(-136.99998, -1548)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
+
+[node name="Sprite2D10" type="Sprite2D" parent="clouds" unique_id=2102786929]
+position = Vector2(-75, -1958)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_85g3d")
+
+[node name="Sprite2D11" type="Sprite2D" parent="clouds" unique_id=1997200245]
+position = Vector2(96.999985, -1766)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tipki")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=474936407]
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD6/+f/AAAAAAAAAAD6/+j/AAAAAAAAAAD6/+n/AAAAAAAAAAD6/+r/AAAAAAAAAAD6/+v/AAAAAAAAAAD6/+z/AAAAAAAAAAD6/+3/AAAAAAAAAAD6/+7/AAAAAAAAAAD6/+//AAAAAAAAAAD6//D/AAAAAAAAAAD6//H/AAAAAAAAAAD6//L/AAAAAAAAAAD6//P/AAAAAAAAAAD6//T/AAAAAAAAAAD6//X/AAAAAAAAAAD6//b/AAAAAAAAAAD6//f/AAAAAAAAAAD6//j/AAAAAAAAAAD6//n/AAAAAAAAAAD6//r/AAAAAAAAAAD6//v/AAAAAAAAAAD6//z/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAAAAAD6/wQAAAAAAAAAAAD6/wUAAAAAAAAAAAD6/wYAAAAAAAAAAAD6/wcAAAAAAAAAAAD6/wgAAAAAAAAAAAD6/wkAAAAAAAAAAAD6/woAAAAAAAAAAAD6/wsAAAAAAAAAAAD6/+b/AAAAAAAAAAD6/+X/AAAAAAAAAAD6/+T/AAAAAAAAAAD6/+P/AAAAAAAAAAD6/+L/AAAAAAAAAAD6/+H/AAAAAAAAAAD6/+D/AAAAAAAAAAD6/9//AAAAAAAAAAD6/97/AAAAAAAAAAD6/93/AAAAAAAAAAD6/9z/AAAAAAAAAAD6/9v/AAAAAAAAAAD6/9r/AAAAAAAAAAD6/9n/AAAAAAAAAAD6/9j/AAAAAAAAAAD6/9f/AAAAAAAAAAD6/9b/AAAAAAAAAAD6/9X/AAAAAAAAAAD6/9T/AAAAAAAAAAD6/9P/AAAAAAAAAAD6/9L/AAAAAAAAAAD6/9H/AAAAAAAAAAD6/9D/AAAAAAAAAAD6/8//AAAAAAAAAAD6/87/AAAAAAAAAAD6/83/AAAAAAAAAAD6/8z/AAAAAAAAAAD6/8v/AAAAAAAAAAD6/8r/AAAAAAAAAAD6/8n/AAAAAAAAAAD6/8j/AAAAAAAAAAD6/8f/AAAAAAAAAAD6/8b/AAAAAAAAAAD6/8X/AAAAAAAAAAD6/8T/AAAAAAAAAAD6/8P/AAAAAAAAAAD6/8L/AAAAAAAAAAD6/8H/AAAAAAAAAAD6/8D/AAAAAAAAAAD6/7//AAAAAAAAAAD6/77/AAAAAAAAAAD6/73/AAAAAAAAAAD6/7z/AAAAAAAAAAD6/7v/AAAAAAAAAAD6/7r/AAAAAAAAAAD6/7n/AAAAAAAAAAD6/7j/AAAAAAAAAAD6/7f/AAAAAAAAAAD6/7b/AAAAAAAAAAD6/7X/AAAAAAAAAAD6/7T/AAAAAAAAAAD6/7P/AAAAAAAAAAD6/7L/AAAAAAAAAAD6/7H/AAAAAAAAAAD6/7D/AAAAAAAAAAD6/6//AAAAAAAAAAD6/67/AAAAAAAAAAD6/63/AAAAAAAAAAD6/6z/AAAAAAAAAAD6/6v/AAAAAAAAAAD6/6r/AAAAAAAAAAD6/6n/AAAAAAAAAAD6/6j/AAAAAAAAAAD6/6f/AAAAAAAAAAD6/6b/AAAAAAAAAAD6/6X/AAAAAAAAAAD6/6T/AAAAAAAAAAD6/6P/AAAAAAAAAAD6/6L/AAAAAAAAAAD6/6H/AAAAAAAAAAD6/6D/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_tipki")
-
-[connection signal="pressed" from="Button" to="CharacterBody2D" method="_on_button_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
